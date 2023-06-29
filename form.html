@@ -1,14 +1,27 @@
-<form>
- <label>ФИО:</label> <input type="text" /><br />
-   <label>Дата рождения::</label> <input type="date" /><br />
-   <label>Номер зачетки:</label> <input type="number" /><br />
- <label>Пол:</label> <input type="radio" />Муж.<input type="radio" />Жен.<br />
+<p id="content"></p>
+<form name="f">
+ <label>ФИО:</label> <input type="text" name="fio" /><br />
+   <label>Дата рождения::</label> <input type="date" name="dateb"/><br />
+   <label>Номер зачетки:</label> <input type="number" name="numbercart" /><br />
+ <label>Пол:</label> <input type="radio" name="poll"/>Муж.<input type="radio" />Жен.<br />
   <br />
-   <label>Email:</label> <input type="email" /><br />
-   <select>
+   <label>Email:</label> <input type="email" name="email" /><br />
+   <select name="l">
      <option>отлично</option>
       <option>хорошо</option>
      <option>удовлетворительно</option>
      <option>неудовлетворительно</option>
    </select>
+ <input type="submit" onlick="start()"/>
 </form>
+<script>
+ function start(){
+   let fio = f.fio.value;
+   let dateb = f.dateb.value;
+   let numbercart = f.numbercart.value;
+   let poll = f.poll.value;
+   let email = f.email.value;
+   let l = f.l.value;
+  document.getElementById('content').innerHTML = fio+dateb+numbercart+poll+email+l;
+ }
+</script>
